@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
-        "multiset"
-    ]
+        "multiset",
+        "nums"
+    ],
+    "markdown.copyFiles.destination": {
+        "*/*.md": "imgs/algorithm/${documentBaseName}.png"
+    }
 }
