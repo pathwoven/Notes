@@ -1,3 +1,4 @@
+> 题目及解法来源于代码随想录，本文为记录本人的一些思考
 # 哈希表
 又名散列表。  
 一般用于快速判断一个**元素是否出现**在集合里。  
@@ -11,7 +12,7 @@
 - 线性探测法
 #### 拉链法
 发生碰撞的元素被存储在链表中  
-<p align=center><img src="imgs/algorithm/哈希表.png" width=60% /></p>
+<p align=center><img src="imgs/algorithm/hash.png" width=60% /></p>
 
 #### 线性探测法
 一定要保证tableSize > dataSize，依靠哈希表中的空位解决碰撞问题。  
@@ -19,9 +20,9 @@
 数组、set(unordered_set)、map(unordered_map)
 #### set与map
 set底层实现及优劣势如下：  
-<p align=center><img src="imgs/algorithm/哈希表-1.png" width=60% /></p>
+<p align=center><img src="imgs/algorithm/hash-1.png" width=60% /></p>
 map底层实现及优劣势如下：  
-<p align=center><img src="imgs/algorithm/哈希表-2.png" width=60% /></p>
+<p align=center><img src="imgs/algorithm/hash-2.png" width=60% /></p>
 
 set,multiset,map,multimap 底层为**红黑树**，而无序的unordered_set与unordered_map底层为哈希表，红黑树的key值是有序的，而哈希表是无序的（其排布是按哈希值映射，而非key值）。
 

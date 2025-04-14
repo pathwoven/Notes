@@ -1,3 +1,4 @@
+> 题目及解法来源于代码随想录，本文为记录本人的一些思考
 # 字符串
 ---
 ## 基础
@@ -74,7 +75,7 @@ https://kamacoder.com/problempage.php?pid=1065
 ### 解
 与之前的反转字符串中的单词一样，要求<u>调换子数组的位置，且子数组内的排序不变</u>，可以采用**整体反转+局部反转**，反转两次后，就可以前后调换子数组的位置了。  
 <p align="center">
-<img src="imgs/algorithm/字符串.png" width=60% />
+<img src="imgs/algorithm/string.png" width=60% />
 </p>
 
 ---
@@ -95,7 +96,7 @@ https://leetcode.cn/problems/repeated-substring-pattern/
 **移动匹配**的思路是：将原字符s串首尾相连，构成ss，并去掉第一个和最后一个字符（防止误判），如果能在其中找到子串s，则满足要求。该方法需要在ss里匹配s，要么也使用KMP，要么调库函数（如contains，find，不同语言库函数实现不同，一般复杂度为O(m+n)）   
 #### KMP算法
 主要思路为：如果一个字符串s可以由其子串重复n次组成，那么其最长公共前后缀不包含的子串一定是s的最小重复子串（注意，前缀不包含最后一个字符，后缀也不包含第一个字符），如下图：  
-<p align=center><img src="imgs/algorithm/字符串-1.png" width=50%/></p>
+<p align=center><img src="imgs/algorithm/string-1.png" width=50%/></p>
 
 由图也可以看出，s的长度必然可以整除该最小子串。而反过来，假如已知s的长度可以整除该子串p，那么，就可以将前缀划分为长度相等的块p1,p2,....pn。p等于pn，进而等于pn-1（比对前后缀的位置即可得出）  
 所以计算方法如下(时间复杂度为O(n)) ：(next表实现不同，索引上会有差异) 
